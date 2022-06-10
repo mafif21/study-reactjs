@@ -6,6 +6,8 @@ import Teams from "./teams";
 import Blog from "./blog";
 import Detail from "./blogDetail";
 import Error from "./notFound";
+import Login from "./login";
+import Dashboard from "./dashboard";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/blog">Blog</Link>
+        <Link to="/login">Login</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -25,6 +28,9 @@ function App() {
         <Route path="blog" element={<Blog />}></Route>
         <Route path="blog/:artikelId" element={<Detail />}></Route>
         <Route path="*" element={<Error />}></Route>
+
+        <Route path="login" element={<Login />}></Route>
+        <Route path="dashboard" element={<Dashboard />}></Route>
       </Routes>
     </div>
   );
