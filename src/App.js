@@ -5,6 +5,7 @@ import About from "./about";
 import Teams from "./teams";
 import Blog from "./blog";
 import Detail from "./blogDetail";
+import Error from "./notFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
         <Route path="blog" element={<Blog />}></Route>
         <Route path="blog/:artikelId" element={<Detail />}></Route>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
     </div>
   );
